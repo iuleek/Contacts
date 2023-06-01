@@ -14,6 +14,8 @@ li {
     margin-bottom: 1rem;
     font-weight: 700;
     font-size: 0.8em;
+    display: flex;
+    align-content: center;
 }
 p {
     margin: 0;
@@ -58,10 +60,10 @@ footer {
 .right-side {
     grid-area: right-side;
 }
-.container {
+.wrapper {
     display: grid;
     grid-template-areas:
-    "nav right-side" ;
+    "aside right-side" ;
         /* "nav topBar"
         "nav topBar__hr"
         "nav contacts-ctrl"
@@ -71,39 +73,75 @@ footer {
     /* grid-template-rows: 1fr 0.5fr 9fr 0.5fr 1fr; */
     grid-template-columns: 1fr 4fr;
 }
-.navbar {
-    grid-area: nav;
+.aside-wrapper {
+    grid-area: aside;
     background-color: black;
     color: #fff;
     padding: 1rem 0rem 1rem 2rem;
     position: relative;
-    height: 100vh;
 }
-.navbar__navigation {
+.nav {
     padding: 2rem 0;
 }
-.navbar__title {
+.nav__title {
     font-weight: 500;
     font-size: 0.8em;
     color: #FFFFFFBF;
     margin-bottom: 1rem;
 }
-.navigation__icon {
+.nav__dash::before {
+    content: url("icons/dashboard-icon.svg");
     margin-right: 1rem;
     width: 16px;
     height: 16px;
 }
-.navbar__photo {
+ul.nav__sections__ls a:hover{
+color: #AE7AFF;
+}
+ul.nav__sections__ls a {
+    display:flex;
+}
+.nav__products::before {
+    content:url("icons/products-icon.svg");
+    margin-right: 1rem;
+    width: 16px;
+    height: 16px;
+}
+.nav__contacts::before {
+    content:url("icons/contacts-icon.svg");
+    margin-right: 1rem;
+    width: 16px;
+    height: 16px;
+}
+.nav__customers::before {
+    content:url("icons/customers-icon.svg");
+    margin-right: 1rem;
+    width: 16px;
+    height: 16px;
+}
+.nav__sales::before {
+    content:url("icons/sales-icon.svg");
+    margin-right: 1rem;
+    width: 16px;
+    height: 16px;
+}
+.nav__analytics::before {
+    content:url("icons/analytics-icon.svg");
+    margin-right: 1rem;
+    width: 16px;
+    height: 16px;
+}
+.profile__img {
     margin-right: 1rem;
     height: 22px;
     width: 22px;
 }
-.navbar__profile {
+.nav__profile {
     position: absolute;
     bottom: 5%;
     display: flex;
 }
-.navbar__profile__btn {
+.profile__btn {
     font-weight: 700;
     font-size: 0.8em;
     margin-left: 2rem;
@@ -111,11 +149,13 @@ footer {
     border:none;
 }
 .topBar {
-    grid-area: topBar;
     display: grid;
     grid-template: "topBar__title topBar__options topBar__create" 60px / 8fr 2fr 2fr;
     align-items: center;
     margin: 0 2rem;
+}
+.title__mobile {
+    display: none;
 }
 .topBar__options {
     display: flex;
@@ -173,6 +213,14 @@ footer {
 }
 #contacts {
     margin:  2rem 2rem 0 2rem;
+}
+.contacts__name {
+    font-size: 0.8em;
+    font-weight: 700;
+}
+.contacts__email {
+    font-weight: 400;
+    font-size: 0.8em;
 }
 .contacts__checkbox {
     transform: scale(1.5);
@@ -247,4 +295,47 @@ footer {
 .switch__light {
     background-color: #AE7AFF;
     border: 1px solid black;
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 640px) {
+    .aside-wrapper, .pagin, .bottom, .topBar__hr {
+        display: none;
+    }
+    .title__mobile {
+        display:flex;
+    }
+    .title__desktop {
+        display: none;
+    }
+    .contacts-ctrl {
+        display: grid;
+        grid-template: "contacts-ctrl__views";
+    }
+    .contacts-ctrl__opt {
+        display:none;
+    }
+    .contacts-ctrl__views__btn {
+        width: 33%;
+    }
+    .topBar {
+        grid-template: "topBar__title search" 60px/ 4fr 1fr;
+    }
+    .search {
+        border: 1px solid black;
+        padding: 0.5rem 0.7rem;
+    }
+    .topBar__create {
+        display: none;
+    }
+    .notifications,.apps {
+        display: none;
+    }
+    #email, #service {
+        display:none;
+    }
+    .wrapper {
+        display: initial; 
+    }
 }

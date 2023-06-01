@@ -18,32 +18,26 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar">
+    <div class="wrapper">
+        <aside class="aside-wrapper">
             <div class="logo">
                 <img src="images/logo.svg">
             </div>
-            <div class="navbar__navigation">
-                <p class="navbar__title">Navigation</p>
-                <ul class="navbar__navigation__sections">
-                    <li><img class="navigation__icon" src="icons/dashboard-icon.svg"><a class="navigation__item"
-                            href="#">Dashboard</a></li>
-                    <li><img class="navigation__icon" src="icons/products-icon.svg"><a class="navigation__item"
-                            href="#">Projects</a></li>
-                    <li><img class="navigation__icon" src="icons/contacts-icon.svg"><a class="navigation__item"
-                            href="#">Contacts</a></li>
-                    <li><img class="navigation__icon" src="icons/customers-icon.svg"><a class="navigation__item"
-                            href="#">Customers</a></li>
-                    <li><img class="navigation__icon" src="icons/sales-icon.svg"><a class="navigation__item"
-                            href="#">Sales</a></li>
-                    <li><img class="navigation__icon" src="icons/analytics-icon.svg"><a class="navigation__item"
-                            href="#">Analytics</a></li>
+            <div class="nav">
+                <p class="nav__title">Navigation</p>
+                <ul class="nav__sections__ls">
+                    <li><a class="nav__item dash" href="#"><span>Dashboard</span></a></li>
+                    <li><a class="nav__item product"href="#"><span>Products</span></a></li>
+                    <li><a class="nav__item cont" href="#"><span>Contacts</span></a></li>
+                    <li><a class="nav__item customer" href="#"><span>Customers</span></a></li>
+                    <li><a class="nav__item sales" href="#"><span>Sales</span></a></li>
+                    <li><a class="nav__item analytics" href="#"><span>Analytics</span></a></li>
                 </ul>
-            </div>
-            <div class="navbar__team">
-                <p class="navbar__title">Team Members</p>
-                <ul class="navbar__team__members">
-                    <li><img class="navbar__photo" src="images/alexandre.png">Alexandra Paiva</li>
+            </div> 
+            <div class="nav__team">
+                <p class="nav__title">Team Members</p>
+                <ul class="nav__team__ls">
+                    <li><img class="profile__img" src="images/alexandre.png">Alexandra Paiva</li>
                     <!-- <li><img class="" src="">Thanawan Chadee</li>
                     <li><img class="" src="">Justine Robinson</li> -->
                 </ul>
@@ -51,24 +45,25 @@
                     <summary>See More</summary>
                 </details>
             </div>
-            <div class="navbar__profile">
-                <img class="navbar__photo" src="images/user.png">
+            <div class="nav__profile">
+                <img class="profile__img" src="images/user.png">
                 <p>Henry Richardson</p>
-                <button class="navbar__profile__btn" type="button"><img class="navbar__profile__more"
+                <button class="profile__btn" type="button"><img class="navbar__profile__more"
                         src="icons/more-icon.svg"></button>
             </div>
-        </nav>
+        </aside>
         <div class="right-side">
         <div class="topBar">
             <div class="topBar__title">
-                <h3>Contacts</h3>
+                <h3 class="title__desktop">Contacts</h3>
+                <h3 class="title__mobile">All contacts</h3>
             </div>
             <div class="topBar__options">
-                <button class="topBar__btn" type="button"><img class="topBar__icon"
+                <button class="topBar__btn search" type="button"><img class="topBar__icon"
                         src="icons/search-icon.svg"></button>
-                <button class="topBar__btn" type="button"><img class="topBar__icon"
+                <button class="topBar__btn notifications" type="button"><img class="topBar__icon"
                         src="icons/bell-icon2.svg"></button>
-                <button class="topBar__btn" type="button"><img class="topBar__icon"
+                <button class="topBar__btn apps" type="button"><img class="topBar__icon"
                         src="icons/app-icon.svg"> Apps</button>
             </div>
             <div class="topBar__create">
@@ -102,12 +97,13 @@
                 </tr> -->
                 <thead>
                     <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"> Name <img src="icons/down-icon.svg"></td>
-                        <td>Email <img src="icons/down-icon.svg"></td>
-                        <td>Service <img src="icons/down-icon.svg"></td>
+                        <td id="name"><input class="contacts__checkbox" type="checkbox"> Name <img src="icons/down-icon.svg"></td>
+                        <td id="email">Email <img src="icons/down-icon.svg"></td>
+                        <td id="service">Service <img src="icons/down-icon.svg"></td>
                         <td>Status <img src="icons/down-icon.svg"></td>
                     </tr>
                 </thead>
+                    <tbody id="contactsBody">
                     <tr>
                         <td><input class="contacts__checkbox" type="checkbox"></td>
                         <td></td>
@@ -162,7 +158,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                
+                </tbody>
             </table>
         </div>
         <div class="pagin">
@@ -195,6 +191,9 @@
         </div>
     </div>
     </div>
+
+    <script rel="text/javascript" src="index.js"></script>
+
 </body>
 
 </html>
