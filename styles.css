@@ -1,0 +1,250 @@
+body {
+    background-color: #FAF4F0;
+    font-family: 'Roboto Flex', sans-serif;
+    margin: 0;
+    position: relative;
+
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+h3 {
+    font-weight: 800;
+    font-size: 2em;
+}
+hr {
+    height: 1px;
+    background-color: black;
+}
+tr,table,thead {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+}
+thead td {
+    padding: 0.5rem 1rem;
+}
+td {
+    padding: 1rem 1rem;
+}
+thead > tr {
+    color: grey;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+header {
+    margin-left: 2rem;
+}
+footer {
+    grid-area: footer;
+}
+.right-side {
+    grid-area: right-side;
+}
+.container {
+    display: grid;
+    grid-template-areas:
+    "nav right-side" ;
+        /* "nav topBar"
+        "nav topBar__hr"
+        "nav contacts-ctrl"
+        "nav contacts"
+        "nav pagin"
+        "nav footer"; */
+    /* grid-template-rows: 1fr 0.5fr 9fr 0.5fr 1fr; */
+    grid-template-columns: 1fr 4fr;
+}
+.navbar {
+    grid-area: nav;
+    background-color: black;
+    color: #fff;
+    padding: 1rem 0rem 1rem 2rem;
+    position: relative;
+    height: 100vh;
+}
+.navbar__navigation {
+    padding: 2rem 0;
+}
+.navbar__title {
+    font-weight: 500;
+    font-size: 0.8em;
+    color: #FFFFFFBF;
+    margin-bottom: 1rem;
+}
+.navigation__icon {
+    margin-right: 1rem;
+    width: 16px;
+    height: 16px;
+}
+.navbar__photo {
+    margin-right: 1rem;
+    height: 22px;
+    width: 22px;
+}
+.navbar__profile {
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+}
+.navbar__profile__btn {
+    font-weight: 700;
+    font-size: 0.8em;
+    margin-left: 2rem;
+    background:transparent;
+    border:none;
+}
+.topBar {
+    grid-area: topBar;
+    display: grid;
+    grid-template: "topBar__title topBar__options topBar__create" 60px / 8fr 2fr 2fr;
+    align-items: center;
+    margin: 0 2rem;
+}
+.topBar__options {
+    display: flex;
+    justify-content: end;
+    gap: 5%;
+}
+.topBar__btn {
+    border: none;
+    background: transparent;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+.topBar__create {
+    display: flex;
+    justify-content: end;
+}
+.create__btn {
+    background-color: #AE7AFF;
+    padding: 0.5rem 1rem;
+    border-radius: 1px;
+    font-weight: 700;
+    width: max-content;
+}
+.contacts-ctrl {
+    display: grid;
+    grid-template: "contacts-ctrl__views contacts-ctrl__opt";
+    margin: 1rem 2rem;
+}
+.contacts-ctrl__views {
+    display: flex;
+}
+.contacts-ctrl__opt {
+    display: flex;
+    justify-content: end;
+    gap: 5%;
+}
+.contacts-ctrl__views__btn {
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    color:black;
+    padding: 0.5rem 1rem;
+    gap: 5%;
+}
+.contacts-ctrl__views__btn:hover {
+    background-color: black;
+    color:white;
+}
+.contacts-ctrl__opt__btn {
+    font-weight: 700;
+    background: transparent;
+    border-radius: 1px;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+}
+#contacts {
+    margin:  2rem 2rem 0 2rem;
+}
+.contacts__checkbox {
+    transform: scale(1.5);
+}
+.pagin {
+    display: grid;
+    grid-template: "pagin__prev pagin__text pagin__next";
+    margin: 0.3rem 2rem;
+}
+ .pagin__btn {
+    font-weight: 700;
+    background: transparent;
+    border-radius: 1px;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    width: 25%;
+} 
+.pagin__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.8em;
+    gap: 1%;
+}
+.pagin__prev {
+    display:flex;
+}
+.pagin__next {
+    display:flex;
+    justify-content: end;
+}
+.bottom {
+    display: grid;
+    grid-template: "language links switch" 20px/ 1fr 3fr 1fr;
+    margin: 1rem 2rem;
+}
+.language {
+    display: flex;
+    align-items: center;
+}
+.btn {
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    color:black;
+    padding: 0.5rem 1rem;
+}
+.links {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5%;
+}
+.link {
+    color: black;
+    font-weight: 700;
+    font-size: 0.8em;
+
+}
+.switch {
+    display: flex;
+    justify-content: end;
+}
+.switch-light {
+
+}
+.switch__dark {
+    background:transparent;
+    border: 1px solid black;
+}
+.switch__light {
+    background-color: #AE7AFF;
+    border: 1px solid black;
+}
