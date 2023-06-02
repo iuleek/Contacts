@@ -89,11 +89,8 @@ footer {
     color: #FFFFFFBF;
     margin-bottom: 1rem;
 }
-.nav__dash::before {
+.dash::before {
     content: url("icons/dashboard-icon.svg");
-    margin-right: 1rem;
-    width: 16px;
-    height: 16px;
 }
 ul.nav__sections__ls a:hover{
 color: #AE7AFF;
@@ -101,35 +98,23 @@ color: #AE7AFF;
 ul.nav__sections__ls a {
     display:flex;
 }
-.nav__products::before {
+.products::before {
     content:url("icons/products-icon.svg");
-    margin-right: 1rem;
-    width: 16px;
-    height: 16px;
 }
-.nav__contacts::before {
+.cont::before {
     content:url("icons/contacts-icon.svg");
-    margin-right: 1rem;
-    width: 16px;
-    height: 16px;
 }
-.nav__customers::before {
+.customers::before {
     content:url("icons/customers-icon.svg");
-    margin-right: 1rem;
-    width: 16px;
-    height: 16px;
 }
-.nav__sales::before {
+.sales::before {
     content:url("icons/sales-icon.svg");
-    margin-right: 1rem;
-    width: 16px;
-    height: 16px;
 }
-.nav__analytics::before {
+.analytics::before {
     content:url("icons/analytics-icon.svg");
-    margin-right: 1rem;
-    width: 16px;
-    height: 16px;
+}
+.nav__text {
+    margin-left: 1rem;
 }
 .profile__img {
     margin-right: 1rem;
@@ -163,6 +148,7 @@ ul.nav__sections__ls a {
     gap: 5%;
 }
 .topBar__btn {
+    display: inline-flex;
     border: none;
     background: transparent;
     font-weight: 700;
@@ -210,6 +196,7 @@ ul.nav__sections__ls a {
     border-radius: 1px;
     padding: 0.5rem 1rem;
     border: 1px solid black;
+    display: inline-flex;
 }
 #contacts {
     margin:  2rem 2rem 0 2rem;
@@ -285,9 +272,6 @@ ul.nav__sections__ls a {
     display: flex;
     justify-content: end;
 }
-.switch-light {
-
-}
 .switch__dark {
     background:transparent;
     border: 1px solid black;
@@ -296,8 +280,25 @@ ul.nav__sections__ls a {
     background-color: #AE7AFF;
     border: 1px solid black;
 }
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 768px) and (min-width: 640px) {
+    .nav__text {
+        display: none;
+    }
+    .logo, .nav__title {
+        display: none;
+    }
+    details {
+    display: none;
+    }
+    .wrapper {
+        grid-template-columns: 0.5fr 4fr;
+    }
+    .topBar__title {
+        margin-right: 10rem;
+    }
+    .topBar__btn {
+        display: inline-flex;
+    }
 }
 @media screen and (max-width: 640px) {
     .aside-wrapper, .pagin, .bottom, .topBar__hr {
