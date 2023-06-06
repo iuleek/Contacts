@@ -19,6 +19,19 @@
 
 <body>
     <div class="wrapper">
+        <div class="aside-mobile">
+            <div class="aside-mobile__hr">
+                <hr>
+            </div>
+            <div class="aside-mobile__icons">
+                <img src="icons/dash-black.svg">
+                <img src="icons/products-black.svg">
+                <img src="icons/contacts-purple.svg">
+                <img src="icons/sales-black.svg">
+                <img src="icons/more-black.svg">
+            </div>
+            
+        </div>
         <aside class="aside-wrapper">
             <div class="logo">
                 <img src="images/logo.svg">
@@ -26,12 +39,12 @@
             <div class="nav">
                 <p class="nav__title">Navigation</p>
                 <ul class="nav__sections__ls">
-                    <li><a class="nav__item dash" href="#"><span class="nav__text" >Dashboard</span></a></li>
-                    <li><a class="nav__item products"href="#"><span class="nav__text">Products</span></a></li>
-                    <li><a class="nav__item cont" href="#"><span class="nav__text">Contacts</span></a></li>
-                    <li><a class="nav__item customers" href="#"><span class="nav__text">Customers</span></a></li>
-                    <li><a class="nav__item sales" href="#"><span class="nav__text">Sales</span></a></li>
-                    <li><a class="nav__item analytics" href="#"><span class="nav__text">Analytics</span></a></li>
+                    <li class="dash__item"><a class="nav__item dash" href="#"><span class="nav__text" >Dashboard</span></a></li>
+                    <li class="products__item"><a class="nav__item products"href="#"><span class="nav__text">Products</span></a></li>
+                    <li class="cont__item"><a class="nav__item cont" href="#"><span class="nav__text">Contacts</span></a></li>
+                    <li class="customers__item"><a class="nav__item customers" href="#"><span class="nav__text">Customers</span></a></li>
+                    <li class="sales__item"><a class="nav__item sales" href="#"><span class="nav__text">Sales</span></a></li>
+                    <li class="analytics__item"><a class="nav__item analytics" href="#"><span class="nav__text">Analytics</span></a></li>
                 </ul>
             </div> 
             <div class="nav__team">
@@ -42,7 +55,7 @@
                     <li><img class="" src="">Justine Robinson</li> -->
                 </ul>
                 <details>
-                    <summary>See More</summary>
+                    <summary><span class="summary__text">See More</span></summary>
                 </details>
             </div>
             <div class="nav__profile">
@@ -81,8 +94,14 @@
                 <button class="contacts-ctrl__views__btn">Customers</button>
             </div>
             <div class="contacts-ctrl__opt">
-                <button class="contacts-ctrl__opt__btn sort" type="button"><img class="sort-icon" src="icons/sort-icon.svg"> Sort: A-Z</button>
-                <button class="contacts-ctrl__opt__btn bulk" type="button"><img class="sort-icon" src="icons/bulk-icon.svg"> Bulk Actions</button>
+                <!-- <button class="contacts-ctrl__opt__btn sort" type="button"><img class="sort-icon" src="icons/sort-icon.svg"> Sort: A-Z</button> -->
+                <select name="sort" class="opt sort">
+                    <option class="opt" value="default"><img class="sort-icon" src="icons/sort-icon.svg">Sort: A-Z</option>
+                    <option class="opt" value=""></option>
+                    <option class="opt" value=""></option>
+                    <option class="opt" value=""></option>
+                </select>
+                <button class="opt bulk" type="button"><img class="sort-icon" src="icons/bulk-icon.svg">Bulk Actions</button>
             </div>
         </div>
         <div id="contacts">
@@ -104,7 +123,25 @@
                 </thead>
                     <tbody id="contactsBody">
                     <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"></td>
+                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -116,31 +153,13 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"></td>
+                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"></td>
+                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
                         <td></td>
                         <td></td>
                         <td></td>

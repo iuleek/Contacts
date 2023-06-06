@@ -3,7 +3,16 @@ body {
     font-family: 'Roboto Flex', sans-serif;
     margin: 0;
     position: relative;
-
+    font-weight: 700;
+}
+summary {
+    font-size: 0.8rem;
+}
+summary::marker {
+    content: url(icons/arrow.svg);
+}
+.summary__text {
+    margin-left: 0.5rem;
 }
 ul {
     list-style-type: none;
@@ -51,14 +60,15 @@ thead > tr {
     font-weight: 700;
     font-size: 0.8em;
 }
-header {
-    margin-left: 2rem;
-}
-footer {
-    grid-area: footer;
+option {
+    background-color: #AE7AFF;
 }
 .right-side {
     grid-area: right-side;
+}
+.aside-mobile {
+    grid-area: aside-mobile;
+    display:none;
 }
 .wrapper {
     display: grid;
@@ -186,17 +196,21 @@ ul.nav__sections__ls a {
     padding: 0.5rem 1rem;
     gap: 5%;
 }
+.sort, .bulk {
+    align-items: center;
+}
 .contacts-ctrl__views__btn:hover {
     background-color: black;
     color:white;
 }
-.contacts-ctrl__opt__btn {
+.opt {
     font-weight: 700;
     background: transparent;
     border-radius: 1px;
     padding: 0.5rem 1rem;
     border: 1px solid black;
     display: inline-flex;
+    gap: 0.5rem;
 }
 #contacts {
     margin:  2rem 2rem 0 2rem;
@@ -299,10 +313,34 @@ ul.nav__sections__ls a {
     .topBar__btn {
         display: inline-flex;
     }
+    .nav__dash::before:hover {
+        color:#AE7AFF;
+    }
 }
 @media screen and (max-width: 640px) {
-    .aside-wrapper, .pagin, .bottom, .topBar__hr {
+    .pagin, .bottom, .topBar__hr {
         display: none;
+    }
+    .wrapper {
+        grid-template: "right-side"
+                        "aside-mobile";
+    }
+    .aside-mobile {
+        display: grid;
+    }
+    .aside-mobile__hr {
+        padding: 1rem 0;
+    }
+    .aside-mobile__icons {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 2rem;
+    }
+    .aside-wrapper {
+        margin: 1rem 2rem;
+    }
+    .aside-wrapper{
+        display:none;
     }
     .title__mobile {
         display:flex;
@@ -335,8 +373,5 @@ ul.nav__sections__ls a {
     }
     #email, #service {
         display:none;
-    }
-    .wrapper {
-        display: initial; 
     }
 }
