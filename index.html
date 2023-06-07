@@ -14,200 +14,264 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bruddle Contacts</title>
 </head>
 
 <body>
+<!----- Aside Mobile ------>
     <div class="wrapper">
-        <div class="aside-mobile">
-            <div class="aside-mobile__hr">
+        <div class="nav-mobile">
+            <div class="nav-mobile__hr">
                 <hr>
             </div>
-            <div class="aside-mobile__icons">
+            <div class="nav-mobile__icons">
                 <img src="icons/dash-black.svg">
                 <img src="icons/products-black.svg">
                 <img src="icons/contacts-purple.svg">
                 <img src="icons/sales-black.svg">
                 <img src="icons/more-black.svg">
             </div>
-            
+
         </div>
+
+<!----- Aside Desktop ------>
         <aside class="aside-wrapper">
-            <div class="logo">
+            <div class="burger-icon">
+                <img src="icons/burger-icon.svg">
+            </div>
+            <div class="aside__logo">
                 <img src="images/logo.svg">
             </div>
             <div class="nav">
                 <p class="nav__title">Navigation</p>
                 <ul class="nav__sections__ls">
-                    <li class="dash__item"><a class="nav__item dash" href="#"><span class="nav__text" >Dashboard</span></a></li>
-                    <li class="products__item"><a class="nav__item products"href="#"><span class="nav__text">Products</span></a></li>
-                    <li class="cont__item"><a class="nav__item cont" href="#"><span class="nav__text">Contacts</span></a></li>
-                    <li class="customers__item"><a class="nav__item customers" href="#"><span class="nav__text">Customers</span></a></li>
-                    <li class="sales__item"><a class="nav__item sales" href="#"><span class="nav__text">Sales</span></a></li>
-                    <li class="analytics__item"><a class="nav__item analytics" href="#"><span class="nav__text">Analytics</span></a></li>
+                    <li class="dash__item"><a class="nav__item dash" href="#"><span
+                                class="nav__text">Dashboard</span></a></li>
+                    <li class="products__item"><a class="nav__item products" href="#"><span
+                                class="nav__text">Products</span></a></li>
+                    <li class="cont__item"><a class="nav__item cont" href="#"><span
+                                class="nav__text">Contacts</span></a></li>
+                    <li class="customers__item"><a class="nav__item customers" href="#"><span
+                                class="nav__text">Customers</span></a></li>
+                    <li class="sales__item"><a class="nav__item sales" href="#"><span class="nav__text">Sales</span></a>
+                    </li>
+                    <li class="analytics__item"><a class="nav__item analytics" href="#"><span
+                                class="nav__text">Analytics</span></a></li>
                 </ul>
-            </div> 
+            </div>
             <div class="nav__team">
                 <p class="nav__title">Team Members</p>
                 <ul class="nav__team__ls">
-                    <li><img class="profile__img" src="images/alexandre.png"><span class="nav__text">Alexandra Paiva</span></li>
-                    <!-- <li><img class="" src="">Thanawan Chadee</li>
-                    <li><img class="" src="">Justine Robinson</li> -->
+                    <li>
+                        <img class="profile__img" src="images/alexandre.png">
+                        <span class="nav__text">AlexandraPaiva</span>
+                    </li>
+                    <li>
+                        <img class="profile__img" src="images/chadee.png">
+                        <span class="nav__text">Thanawan Chadee</span>
+                    </li>
+                    <li>
+                        <img class="profile__img" src="images/justine.png">
+                        <span class="nav__text">Justine Robinson</span>
+                        </li>
                 </ul>
                 <details>
                     <summary><span class="summary__text">See More</span></summary>
+                    <ul class="nav__team__ls">
+                        <li>
+                            <img class="profile__img" src="images/alexandre.png">
+                            <span class="nav__text">Alexandra Paiva</span>
+                        </li>
+                        <li>
+                            <img class="profile__img" src="images/chadee.png">
+                            <span class="nav__text">Thanawan Chadee</span>
+                        </li>
+                        <li>
+                            <img class="profile__img" src="images/justine.png">
+                            <span class="nav__text">Justine- Robinson</span>
+                        </li>
+                    </ul>
                 </details>
             </div>
             <div class="nav__profile">
                 <img class="profile__img" src="images/user.png"><span class="nav__text">Henry Richardson</span>
-                <button class="profile__btn" type="button"><img class="navbar__profile__more"
-                        src="icons/more-icon.svg"></button>
+                <button class="profile__btn" type="button"><img class="navbar__profile__more" src="icons/more-icon.svg"></button>
             </div>
         </aside>
-        <div class="right-side">
-        <div class="topBar">
-            <div class="topBar__title">
-                <h3 class="title__desktop">Contacts</h3>
-                <h3 class="title__mobile">All contacts</h3>
-            </div>
-            <div class="topBar__options">
-                <button class="topBar__btn search" type="button"><img class="topBar__icon"
-                        src="icons/search-icon.svg"></button>
-                <button class="topBar__btn notifications" type="button"><img class="topBar__icon"
-                        src="icons/bell-icon2.svg"></button>
-                <button class="topBar__btn apps" type="button"><img class="topBar__icon"
-                        src="icons/app-icon.svg"> Apps</button>
-            </div>
-            <div class="topBar__create">
-                <button class="create__btn" type="button"><img class="contacts-icon" src="icons/create-icon.svg"> Create
-                    new</button>
-                </div>
-        </div>
-        <div class="topBar__hr">
-            <hr>
-        </div>
 
-        <div class="contacts-ctrl">
-            <div class="contacts-ctrl__views">
-                <button class="contacts-ctrl__views__btn">All Contacts</button>
-                <button class="contacts-ctrl__views__btn">Teammates</button>
-                <button class="contacts-ctrl__views__btn">Customers</button>
+<!------ Right-side ------>
+        <div class="right-side">
+
+            <!------ Contact Bar ------>
+            <div class="topBar">
+                <div class="topBar__title">
+                    <h3 class="title__desktop">Contacts</h3>
+                    <h3 class="title__mobile">All contacts</h3>
+                </div>
+                <div class="topBar__options">
+                    <button class="topBar__btn search" type="button"><img class="topBar__icon"
+                            src="icons/search-icon.svg"></button>
+                    <button class="topBar__btn notifications" type="button"><img class="topBar__icon"
+                            src="icons/bell-icon2.svg"></button>
+                    <button class="topBar__btn apps" type="button"><img class="topBar__icon"
+                            src="icons/app-icon.svg"><span class="btn-text"> Apps</span></button>
+                </div>
+                <div class="topBar__create">
+                    <button class="create__btn" type="button"><img class="contacts-icon"
+                            src="icons/create-icon.svg"><span class="btn-text">Create new</span></button>
+                </div>
             </div>
-            <div class="contacts-ctrl__opt">
-                <!-- <button class="contacts-ctrl__opt__btn sort" type="button"><img class="sort-icon" src="icons/sort-icon.svg"> Sort: A-Z</button> -->
-                <select name="sort" class="opt sort">
-                    <option class="opt" value="default"><img class="sort-icon" src="icons/sort-icon.svg">Sort: A-Z</option>
-                    <option class="opt" value=""></option>
-                    <option class="opt" value=""></option>
-                    <option class="opt" value=""></option>
-                </select>
-                <button class="opt bulk" type="button"><img class="sort-icon" src="icons/bulk-icon.svg">Bulk Actions</button>
+            <div class="topBar__hr">
+                <hr>
             </div>
-        </div>
-        <div id="contacts">
-            <table>
-                <!-- <tr>
-                    <td><input class="contacts__checkbox" type="checkbox">Name</td>
-                    <td>Email</td>
-                    <td>Service</td>
-                    <td>Status</td>
-                    <td><button type="button"></button>
-                </tr> -->
-                <thead>
-                    <tr>
-                        <td id="name"><input class="contacts__checkbox" type="checkbox"> Name <img src="icons/down-icon.svg"></td>
-                        <td id="email">Email <img src="icons/down-icon.svg"></td>
-                        <td id="service">Service <img src="icons/down-icon.svg"></td>
-                        <td>Status <img src="icons/down-icon.svg"></td>
-                    </tr>
-                </thead>
+
+            <!------ Contact controls ------>
+            <div class="contacts-ctrl">
+                <div class="contacts-ctrl__views">
+                    <button class="views__btn"><span class="btn-text">All Contacts</span></button>
+                    <button class="views__btn"><span class="btn-text">Teammates</span></button>
+                    <button class="views__btn"><span class="btn-text">Customers</span></button>
+                </div>
+                <div class="contacts-ctrl__opt">
+                    <button class="opt__btn sort" type="button"><img class="opt__icon" src="icons/sort-icon.svg"> Sort: A-Z</button>
+                    <button class="opt__btn bulk" type="button"><img class="opt__icon" src="icons/bulk-icon.svg"> Bulk Actions</button>
+                    <!-- <select name="sort" class="opt sort">
+                        <option class="">Sort: A-Z</option>
+                        <option class="" value="">Z-A</option>
+                        <option class="" value=""></option>
+                    </select>
+
+                    <select name="bulk" class="opt bulk">
+                        <option class="">Bulk Actions</option>
+                        <option class="" value=""></option>
+                        <option class="" value=""></option>
+                    </select> -->
+                </div>
+            </div>
+
+            <!------ Contacts table ------>
+            <div id="contacts-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <td id="name"><input class="contacts__checkbox" type="checkbox"> Name <img src="icons/down-icon.svg"></td>
+                            <td id="email">Email <img src="icons/down-icon.svg"></td>
+                            <td id="service">Service <img src="icons/down-icon.svg"></td>
+                            <td id="status">Status <img src="icons/down-icon.svg"></td>
+                        </tr>
+                    </thead>
                     <tbody id="contactsBody">
-                    <tr>
-                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="name"><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><input class="contacts__checkbox" type="checkbox"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="pagin">
-            <div class="pagin__prev">
-            <button class="pagin__btn" type="button"><img class="pagin_btn-icon" src="icons/prev-icon.svg"> Prev</button>
-        </div>
-            <div class="pagin__text">
-            <p >Page</p>
-            <p class="current">1</p>
-            <p>of</p>
-            <p class="maximum">10</p>
+                        <tr>
+                            <td class="name"></td>
+                            <td class="email"></td>
+                            <td class="service"></td>
+                            <td class="status">
+                                <div class="status__online"><img src="images/online.svg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name"></td>
+                            <td class="email"></td>
+                            <td class="service"></td>
+                            <td class="status">
+                                <div class="status__online"><img src="images/online.svg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name"></td>
+                            <td class="email"></td>
+                            <td class="service"></td>
+                            <td class="status">
+                                <div class="status__online"><img src="images/online.svg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name"></td>
+                            <td class="email"></td>
+                            <td class="service"></td>
+                            <td class="status">
+                                <div class="status__online"><img src="images/online.svg"></div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="name"></td>
+                            <td class="email"></td>
+                            <td class="service"></td>
+                            <td class="status">
+                                <div class="status__online"><img src="images/online.svg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name"></td>
+                            <td class="email"></td>
+                            <td class="service"></td>
+                            <td class="status">
+                                <div class="status__online"><img src="images/online.svg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name"></td>
+                            <td class="email"></td>
+                            <td class="service"></td>
+                            <td class="status">
+                                <div class="status__online"><img src="images/online.svg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name"></td>
+                            <td class="email"></td>
+                            <td class="service"></td>
+                            <td class="status">
+                                <div class="status__online"><img src="images/online.svg"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name"></td>
+                            <td class="email"></td>
+                            <td class="service"></td>
+                            <td class="status">
+                                <div class="status__online"><img src="images/online.svg"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="pagin__next">
-            <button class="pagin__btn" type="button">Next <img class="pagin_btn-icon" src="icons/next-icon.svg"></button>
-        </div>
-        </div>
-        <div class="bottom">
-            <div class="language">
-                <button class="btn" type="button"><img src="icons/language-icon.svg"> English</button>
+
+            <!------ Pagin ------>
+            <div class="pagin">
+                <div class="pagin__prev">
+                    <button class="pagin__btn" type="button"><img class="pagin_btn-icon" src="icons/prev-icon.svg"><span class="btn-text"> Prev</span></button>
+                </div>
+                <div class="pagin__text">
+                    <p>Page</p>
+                    <p class="current">1</p>
+                    <p>of</p>
+                    <p class="maximum">10</p>
+                </div>
+                <div class="pagin__next">
+                    <button class="pagin__btn" type="button"><span class="btn-text">Next </span><img class="pagin_btn-icon" src="icons/next-icon.svg"></button>
+                </div>
             </div>
-            <div class="links">
-                <a class="link" href="#">Privacy Policy</a>
-                <a class="link" href="#">License</a>
-                <a class="link" href="#">API</a>
-            </div>
-            <div class="switch">
-                <button class="switch__light" type="button"><img class="switch__light__icon" src="icons/light-theme-icon.svg"></button>
-                <button class="switch__dark" type="button"><img class="switch__dark__icon" src="icons/dark-theme-icon.svg"></button>
+
+            <!------ Bottom ------>
+            <div class="bottom">
+                <div class="bottom__links">
+                    <button class="links__btn" type="button"><img src="icons/language-icon.svg"><span class="btn-text">
+                            English</span></button>
+                    <a class="link" href="#">Privacy Policy</a>
+                    <a class="link" href="#">License</a>
+                    <a class="link" href="#">API</a>
+                </div>
+                <div class="bottom__switch">
+                    <button id="btn-light" class="switch__light" type="button"><img class="switch__icon"
+                            src="icons/light-theme-icon.svg"></button>
+                    <button id="btn-dark" class="switch__dark" type="button"><img class="switch__icon"
+                            src="icons/dark-theme-icon.svg"></button>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
     <script rel="text/javascript" src="index.js"></script>
