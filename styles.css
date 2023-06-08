@@ -50,7 +50,7 @@ table {
 }
 
 td {
-    padding: 1rem 1rem;
+    padding: 1.2rem 1rem;
 }
 
 thead td {
@@ -111,7 +111,6 @@ details {
     background-color: black;
     color: #fff;
     padding: 1rem 2rem;
-    position: relative;
 }
 
 .aside__burger-icon {
@@ -141,7 +140,9 @@ details {
 .nav__text {
     margin-left: 1rem;
 }
-
+.nav__text:hover {
+    color: #AE7AFF;
+}
 ul.nav__sections__ls a:hover {
     color: #AE7AFF;
 }
@@ -156,35 +157,48 @@ ul.nav__sections__ls a {
     display: inline-flex;
     width: 16px;
 }
-
+.dash:hover::before {
+    content: url("icons/dash-purple.svg");
+}
 .products::before {
     content: url("icons/products-icon.svg");
     display: inline-flex;
     width: 16px;
 }
-
+.products:hover::before {
+    content: url("icons/products-purple.svg");
+}
 .cont::before {
     content: url("icons/contacts-icon.svg");
     display: inline-flex;
     width: 16px;
 }
-
+.cont:hover::before {
+    content: url("icons/contactsSmall-purple.svg");
+}
 .customers::before {
     content: url("icons/customers-icon.svg");
     display: inline-flex;
     width: 16px;
 }
-
+.customers:hover::before {
+    content: url("icons/customers-purple.svg");
+}
 .sales::before {
     content: url("icons/sales-icon.svg");
     display: inline-flex;
     width: 16px;
 }
-
+.sales:hover::before {
+    content: url("icons/sales-purple.svg");
+}
 .analytics::before {
     content: url("icons/analytics-icon.svg");
     display: inline-flex;
     width: 16px;
+}
+.analytics:hover::before {
+    content: url("icons/analytics-purple.svg");
 }
 
 /**************** ASIDE TEAM **********************/
@@ -219,7 +233,7 @@ ul.nav__sections__ls a {
     display: grid;
     grid-template: "topBar__title topBar__options topBar__create" 60px / 8fr 2fr 2fr;
     align-items: center;
-    margin: 0.5rem 2rem 0rem;
+    margin: 0.5rem 4rem 0rem;
 }
 
 .title__mobile {
@@ -257,7 +271,7 @@ ul.nav__sections__ls a {
 .contacts-ctrl {
     display: grid;
     grid-template: "contacts-ctrl__views contacts-ctrl__opt";
-    margin: 1rem 2rem;
+    margin: 1rem 4rem;
 }
 
 .contacts-ctrl__views {
@@ -293,15 +307,21 @@ ul.nav__sections__ls a {
     align-items: center;
 }
 
+.opt__btn:hover {
+    background-color:#AE7AFF;
+}
+
 .opt__icon {
     margin-right: 0.5rem;
 }
 
 /************* CONTACTS TABLE **************/
 #contacts-table {
-    margin: 2rem 2rem 0 2rem;
+    margin: 2rem 4rem 0 4rem;
 }
-
+#name {
+    padding: 0.8rem;
+}
 .contacts__email {
     font-weight: 400;
 }
@@ -315,7 +335,7 @@ ul.nav__sections__ls a {
 .pagin {
     display: grid;
     grid-template: "pagin__prev pagin__text pagin__next";
-    margin: 0.3rem 2rem;
+    margin: 0.3rem 4rem;
 }
 
 .pagin__btn {
@@ -352,7 +372,7 @@ ul.nav__sections__ls a {
 .bottom {
     display: grid;
     grid-template: "links switch" 20px/ 4fr 1fr;
-    margin: 1rem 2rem;
+    margin: 1rem 4rem;
 }
 
 .language {
@@ -369,6 +389,15 @@ ul.nav__sections__ls a {
     align-items: center;
 }
 
+.links__btn::before {
+    content: url(icons/language-icon.svg);
+}
+.links__btn:hover::before {
+    content: url(icons/language-purple.svg);
+}
+.links__btn:hover {
+    color: #AE7AFF;
+}
 .bottom__links {
     display: flex;
     justify-content: start;
@@ -378,6 +407,10 @@ ul.nav__sections__ls a {
 
 .link {
     color: black;
+}
+
+.link:hover {
+    color:#AE7AFF;
 }
 
 .bottom__switch {
@@ -393,15 +426,26 @@ ul.nav__sections__ls a {
 .switch__dark {
     background: transparent;
     border: 1px solid black;
+    height: 25px;
+    padding: 5px;
+    border-bottom-right-radius: 2px;
+    border-left: 0;
+    border-top-right-radius: 2px;
+
 }
 
 .switch__light {
     background-color: #AE7AFF;
     border: 1px solid black;
+    height: 25px;
+    padding: 5px;
+    border-bottom-left-radius: 2px;
+    border-right: 0;
+    border-top-left-radius: 2px;
 }
 
 /*********** TABLET SCREEN ***************/
-@media screen and (max-width: 768px) and (min-width: 640px) {
+@media screen and (min-width: 481px) and (max-width: 983px)  {
 
     .nav__text,
     .aside__logo,
@@ -411,6 +455,11 @@ ul.nav__sections__ls a {
 
     details {
         display: none;
+    }
+
+    .aside__burger-icon {
+        display: flex;
+        margin: 1rem 0;
     }
 
     .wrapper {
@@ -431,7 +480,7 @@ ul.nav__sections__ls a {
 }
 
 /*********** MOBILE SCREEN ************/
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 480px) {
 
     .contacts-ctrl__opt,
     .topBar__create,

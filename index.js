@@ -1,16 +1,17 @@
+// Creating Input
 const check = document.createElement("INPUT");
 check.setAttribute("type", "checkbox");
 check.classList.add("contacts__checkbox")
 
 // Making the switch functional
 document.getElementById("btn-light").addEventListener("click", function () {
-  document.getElementById("btn-dark").style.backgroundColor = "#AE7AFF";
-  document.getElementById("btn-light").style.backgroundColor = "#FAF4F0";
+  document.getElementById("btn-dark").style.backgroundColor = "#FAF4F0";
+  document.getElementById("btn-light").style.backgroundColor = "#AE7AFF";
 });
 
 document.getElementById("btn-dark").addEventListener("click", function () {
-  document.getElementById("btn-light").style.backgroundColor = "#AE7AFF";
-  document.getElementById("btn-dark").style.backgroundColor = "#FAF4F0";
+  document.getElementById("btn-light").style.backgroundColor = "#FAF4F0";
+  document.getElementById("btn-dark").style.backgroundColor = "#AE7AFF";
 });
 
 document.addEventListener('DOMContentLoaded', function () {
