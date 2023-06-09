@@ -69,6 +69,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+/*Event listener on CHECKBOX */
+document.addEventListener("DOMContentLoaded", function() {
+document.getElementById("main-checkbox").addEventListener("click", function() {
+  
+    const checkboxes = document.getElementsByTagName("input");
+    for(var i = 1; i < checkboxes.length; i++) {
+      checkboxes[i].checked = this.checked;
+    }
+});
+});
 // Making the switch functional
 
 /***********************EVENT LISTENER DARK THEME********************/
