@@ -110,12 +110,9 @@
                     <h3 class="title__mobile">All contacts</h3>
                 </div>
                 <div class="topBar__options">
-                    <button class="topBar__btn search" type="button"><img class="topBar__icon"
-                            src="icons/search-icon.svg"></button>
-                    <button class="topBar__btn notifications" type="button"><img class="topBar__icon"
-                            src="icons/bell-icon2.svg"></button>
-                    <button class="topBar__btn apps" type="button"><img class="topBar__icon"
-                            src="icons/app-icon.svg"><span class="btn-text"> Apps</span></button>
+                    <button class="topBar__btn search" type="button"></button>
+                    <button class="topBar__btn notifications" type="button"></button>
+                    <button class="topBar__btn apps" type="button"><span class="btn-text"> Apps</span></button>
                 </div>
                 <div class="topBar__create">
                     <button class="create__btn" type="button"><img class="contacts-icon"
@@ -134,8 +131,8 @@
                     <button class="views__btn"><span class="btn-text">Customers</span></button>
                 </div>
                 <div class="contacts-ctrl__opt">
-                    <button class="opt__btn sort" type="button"><img class="opt__icon" src="icons/sort-icon.svg"> Sort: A-Z</button>
-                    <button class="opt__btn bulk" type="button"><img class="opt__icon" src="icons/bulk-icon.svg"> Bulk Actions</button>
+                    <button class="opt__btn sort" type="button"> Sort: A-Z</button>
+                    <button class="opt__btn bulk" type="button"> Bulk Actions</button>
                     <!-- <select name="sort" class="opt sort">
                         <option class="">Sort: A-Z</option>
                         <option class="" value="">Z-A</option>
@@ -152,13 +149,13 @@
 
             <!------ Contacts table ------>
             <div id="contacts-table">
-                <table>
+                <table id="contactsTable">
                     <thead>
                         <tr>
-                            <td id="name"><input class="contacts__checkbox" type="checkbox"> Name <img src="icons/down-icon.svg"></td>
-                            <td id="email">Email <img src="icons/down-icon.svg"></td>
-                            <td id="service">Service <img src="icons/down-icon.svg"></td>
-                            <td id="status">Status <img src="icons/down-icon.svg"></td>
+                            <td id="name" class="theader-icon"><input class="contacts__checkbox" type="checkbox"> Name 
+                            <td id="email" class="theader-icon">Email </td>
+                            <td id="service" class="theader-icon">Service </td>
+                            <td id="status" class="theader-icon">Status </td>
                         </tr>
                     </thead>
                     <tbody id="contactsBody">
@@ -242,7 +239,7 @@
             <!------ Pagin ------>
             <div class="pagin">
                 <div class="pagin__prev">
-                    <button class="pagin__btn" type="button"><img class="pagin_btn-icon" src="icons/prev-icon.svg"><span class="btn-text"> Prev</span></button>
+                    <button class="pagin__btn btn__prev" type="button"><span class="btn-text"> Prev</span></button>
                 </div>
                 <div class="pagin__text">
                     <p>Page</p>
@@ -251,7 +248,7 @@
                     <p class="maximum">10</p>
                 </div>
                 <div class="pagin__next">
-                    <button class="pagin__btn" type="button"><span class="btn-text">Next </span><img class="pagin_btn-icon" src="icons/next-icon.svg"></button>
+                    <button class="pagin__btn btn__next" type="button"><span class="btn-text">Next </span></button>
                 </div>
             </div>
 

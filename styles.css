@@ -32,11 +32,6 @@ h3 {
     /* 30px ~ 2em */
 }
 
-hr {
-    height: 1px;
-    background-color: black;
-}
-
 tr,
 table,
 thead {
@@ -54,11 +49,7 @@ td {
 }
 
 thead td {
-    padding: 0.5rem 1rem;
-}
-
-thead>tr {
-    color: grey;
+    padding: 0.8rem 1rem;
 }
 
 option {
@@ -253,6 +244,16 @@ ul.nav__sections__ls a {
     align-items: center;
 }
 
+.search::before {
+    content: url("icons/search-icon.svg");
+}
+.notifications::before {
+    content: url("icons/bell-icon2.svg");
+}
+.apps::before {
+    content: url("icons/app-icon.svg");
+}
+
 .topBar__create {
     display: flex;
     justify-content: end;
@@ -287,7 +288,6 @@ ul.nav__sections__ls a {
 .views__btn {
     background-color: transparent;
     border: none;
-    color: black;
     padding: 0.5rem 1rem;
     gap: 5%;
 }
@@ -304,14 +304,17 @@ ul.nav__sections__ls a {
     border: 1px solid black;
     font-weight: 700;
     display: flex;
-    align-items: center;
 }
 
 .opt__btn:hover {
     background-color:#AE7AFF;
 }
-
-.opt__icon {
+.sort::before {
+    content: url("icons/sort-icon.svg");
+    margin-right: 0.5rem;
+}
+.bulk::before {
+    content: url("icons/bulk-icon.svg");
     margin-right: 0.5rem;
 }
 
@@ -319,9 +322,7 @@ ul.nav__sections__ls a {
 #contacts-table {
     margin: 2rem 4rem 0 4rem;
 }
-#name {
-    padding: 0.8rem;
-}
+
 .contacts__email {
     font-weight: 400;
 }
@@ -330,7 +331,10 @@ ul.nav__sections__ls a {
     transform: scale(1.5);
     margin-right: 1rem;
 }
-
+.theader-icon::after {
+    content: url("icons/down-icon.svg");
+    margin-left: 0.5rem;
+}
 /********** PAGIN **********/
 .pagin {
     display: grid;
@@ -363,11 +367,18 @@ ul.nav__sections__ls a {
     display: flex;
 }
 
+.btn__prev::before {
+    content: url("icons/prev-icon.svg");
+}
+
 .pagin__next {
     display: flex;
     justify-content: end;
 }
 
+.btn__next::after {
+    content: url("icons/next-icon.svg");
+}
 /********** BOTTOM ***********/
 .bottom {
     display: grid;
@@ -480,7 +491,7 @@ ul.nav__sections__ls a {
 }
 
 /*********** MOBILE SCREEN ************/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
 
     .contacts-ctrl__opt,
     .topBar__create,
@@ -497,10 +508,7 @@ ul.nav__sections__ls a {
         display: none;
     }
 
-    #email,
-    #service,
-    #name,
-    #status {
+    thead {
         display: none;
     }
 
@@ -557,4 +565,66 @@ ul.nav__sections__ls a {
         display: flex;
         justify-content: flex-end;
     }
+}
+
+/**************** DARK THEME ************************/
+.dark-theme {
+    background-color: #161616;
+    color: #fff;
+}
+.btn__dark {
+    color: #fff;
+}
+.search__dark::before {
+    content: url("icons-dark/search.svg");
+}
+.notifications__dark::before {
+    content: url("icons-dark/bell.svg");
+}
+.apps__dark::before {
+    content: url("icons-dark/apps.svg")
+}
+.opt__btn__dark {
+    background-color: black;
+    border: 1px solid #fff;
+}
+.views__btn__dark:hover {
+    background-color: #444444;
+}
+.link__dark {
+    color:#fff;
+}
+.sort__dark::before {
+    content: url("icons-dark/sort.svg");
+}
+.bulk__dark::before {
+    content: url("icons-dark/bulk.svg");
+}
+.btn__prev__dark,.btn__next__dark {
+    border: 1px solid #fff;
+}
+.btn__prev__dark:hover,.btn__next__dark:hover {
+    border: 1px solid #fff;
+    background-color: #444444;
+}
+.btn__prev__dark::before {
+    content: url("icons-dark/prev.svg");
+}
+
+.btn__next__dark::after {
+    content: url("icons-dark/next.svg");
+}
+.links__btn__dark::before {
+    content: url("icons-dark/language.svg");
+}
+
+.table__dark {
+    background-color: #000;
+}
+.tr__dark {
+    border: 1px solid #fff;
+}
+
+.theader-icon__dark::after{
+    content: url("icons-dark/arrow-down.svg");
 }
