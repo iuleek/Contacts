@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/*Event listener on CHECKBOX */
+/*********************EVENT LISTENER CHECKBOXES ***************************/
 document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("main-checkbox").addEventListener("click", function() {
   
@@ -81,7 +81,7 @@ document.getElementById("main-checkbox").addEventListener("click", function() {
 });
 // Making the switch functional
 
-/***********************EVENT LISTENER DARK THEME********************/
+/***********************EVENT LISTENER DARK THEME***************************/
 document.getElementById("btn-dark").addEventListener("click", function () {
   document.getElementById("btn-light").style.backgroundColor = "#FAF4F0";
   document.getElementById("btn-dark").style.backgroundColor = "#AE7AFF";

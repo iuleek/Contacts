@@ -150,7 +150,6 @@ ul.nav__sections__ls a {
     display: inline-flex;
     width: 16px;
 }
-
 .dash:hover::before {
     content: url("icons/dash-purple.svg");
 }
@@ -166,13 +165,12 @@ ul.nav__sections__ls a {
 }
 
 .cont::before {
-    content: url("icons/contacts-icon.svg");
+    content: url("icons/contactsSmall-purple.svg");
     display: inline-flex;
     width: 16px;
 }
-
-.cont:hover::before {
-    content: url("icons/contactsSmall-purple.svg");
+.cont {
+    color:#AE7AFF;
 }
 
 .customers::before {
@@ -260,13 +258,23 @@ ul.nav__sections__ls a {
 .search::before {
     content: url("icons/search-icon.svg");
 }
-
+.search:hover::before {
+    content: url("icons/search-purple.svg");
+}
 .notifications::before {
     content: url("icons/bell-icon2.svg");
 }
-
+.notifications:hover::before {
+    content: url("icons/bell-purple2.svg");
+}
 .apps::before {
     content: url("icons/app-icon.svg");
+}
+.apps:hover {
+    color:#AE7AFF;
+}
+.apps:hover::before {
+    content: url("icons/app-purple.svg");
 }
 
 .topBar__create {
@@ -323,6 +331,7 @@ ul.nav__sections__ls a {
     border: 1px solid black;
     font-weight: 700;
     display: flex;
+    width: max-content;
 }
 
 .opt__btn:hover {
@@ -559,7 +568,7 @@ ul.nav__sections__ls a {
     .nav-mobile__icons {
         display: flex;
         justify-content: space-between;
-        margin: 0 2rem;
+        margin: 0 2rem 1.5rem;
     }
 
     .aside-wrapper {
